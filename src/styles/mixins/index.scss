@@ -1,0 +1,53 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin vertical-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin horizontal-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin hide-scrollbar {
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}
+
+@mixin border-1px($color:#ebebeb) {
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-bottom: 1PX solid $color;
+    transform-origin: 0 bottom;
+    @media screen and (-webkit-min-device-pixel-ratio: 2) {
+      width: 200%;
+      transform: scale(.5) translateZ(0)
+    }
+    @media screen and (-webkit-min-device-pixel-ratio: 3) {
+      width: 300%;
+      transform: scale(.333) translateZ(0);
+    }
+  }
+}
