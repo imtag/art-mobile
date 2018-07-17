@@ -32,15 +32,15 @@
   }
 }
 
-@mixin border-1px($color:#ebebeb) {
+@mixin border-top-1px($color:#ebebeb) {
   position: relative;
-  &:after {
+  &:before {
     content: "";
     position: absolute;
+    top: 0;
     left: 0;
-    bottom: 0;
-    border-bottom: 1PX solid $color;
-    transform-origin: 0 bottom;
+    border-top: 1PX solid $color;
+    transform-origin: left top;
     @media screen and (-webkit-min-device-pixel-ratio: 2) {
       width: 200%;
       transform: scale(.5) translateZ(0)
@@ -50,4 +50,75 @@
       transform: scale(.333) translateZ(0);
     }
   }
+}
+
+@mixin border-right-1px($color:#ebebeb) {
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-right: 1PX solid $color;
+    transform-origin: right top;
+    @media screen and (-webkit-min-device-pixel-ratio: 2) {
+      height: 200%;
+      transform: scale(.5) translateZ(0)
+    }
+    @media screen and (-webkit-min-device-pixel-ratio: 3) {
+      height: 300%;
+      transform: scale(.333) translateZ(0);
+    }
+  }
+}
+
+@mixin border-bottom-1px($color:#ebebeb) {
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom: 1PX solid $color;
+    transform-origin: left bottom;
+    @media screen and (-webkit-min-device-pixel-ratio: 2) {
+      width: 200%;
+      transform: scale(.5) translateZ(0)
+    }
+    @media screen and (-webkit-min-device-pixel-ratio: 3) {
+      width: 300%;
+      transform: scale(.333) translateZ(0);
+    }
+  }
+}
+
+@mixin border-left-1px($color:#ebebeb) {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    border-left: 1PX solid $color;
+    transform-origin: left top;
+    @media screen and (-webkit-min-device-pixel-ratio: 2) {
+      height: 200%;
+      transform: scale(.5) translateZ(0)
+    }
+    @media screen and (-webkit-min-device-pixel-ratio: 3) {
+      height: 300%;
+      transform: scale(.333) translateZ(0);
+    }
+  }
+}
+
+@mixin mask() {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .5);
 }

@@ -21,7 +21,7 @@
   @import '~src/styles/themes/default.scss';
   .art-column {
     &__title {
-      padding: 20px 0 10px;
+      padding: 22px 0 10px;
       font-size: $font-size-small;
       color: $color-neutral-sub;
     }

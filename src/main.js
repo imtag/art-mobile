@@ -7,6 +7,7 @@ import Icon from './components/icon'
 import Row from './components/row'
 import Col from './components/col'
 import Loading from './components/loading'
+import Tag from './components/tag'
 // nav
 import Tabs from './components/tabs'
 import Tab from './components/tab'
@@ -19,7 +20,9 @@ import Radio from './components/radio'
 // scroll
 import Scroll from './components/scroll'
 import PullDown from './components/pull-down'
+// feedback
 import Toast from './components/toast'
+import Dialog from './components/dialog'
 
 const components = [
   Button,
@@ -27,6 +30,7 @@ const components = [
   Row,
   Col,
   Loading,
+  Tag,
   Tabs,
   Tab,
   TabPanel,
@@ -35,7 +39,8 @@ const components = [
   Radios,
   Radio,
   Scroll,
-  PullDown
+  PullDown,
+  Dialog
 ]
 
 const install = Vue => {

@@ -1,47 +1,41 @@
 <template>
   <div class="art-home">
-    <template v-if="isHome">
-      v1.13
-      <div class="art-home-logo">
-        <h1 class="art-home-logo__title">Art Mobile</h1>
-        <p class="art-home-logo__desc">An elegant mobile UI lib from Vue.js</p>
+    <div class="art-home-logo">
+      <h1 class="art-home-logo__title">Art Mobile</h1>
+      <p class="art-home-logo__desc">An elegant mobile UI lib from Vue.js</p>
+    </div>
+    <div class="art-home-route">
+      <div 
+        class="art-home-route__wrap"
+        v-if="route.meta && route.meta.isCategory"
+        v-for="(route, index) in routes"
+        :key="index">
+        <column :title="route.meta.title" />
+        <ul class="art-home-route__list">
+          <router-link 
+            v-for="(routeItem, index) in route.children" :key="index"
+            :to="routeItem.path"
+            tag="li"
+            class="art-home-route__item">
+            <div class="art-home-route__item-wrap">
+              <div>
+                <span style="vertical-align:middle;margin-right:10px;">{{ routeItem.meta.title }}</span>
+                <art-tag v-if="!routeItem.meta.finish" type="danger" size="small" plain>待完成</art-tag>
+              </div>
+              <art-icon name="chevron-right" />
+            </div>
+          </router-link>
+        </ul>
       </div>
-      <div class="art-home-route">
-        <div 
-          class="art-home-route__wrap"
-          v-if="route.meta && route.meta.isCategory"
-          v-for="(route, index) in routes"
-          :key="index">
-          <column :title="route.meta.title" />
-          <ul class="art-home-route__list">
-            <router-link 
-              v-for="(routeItem, index) in route.children" :key="index"
-              :to="routeItem.path"
-              tag="li"
-              class="art-home-route__item">
-              <p class="art-home-route__item-title">
-                {{ routeItem.meta.title }}
-                <art-icon name="enter" />
-              </p>
-            </router-link>
-          </ul>
-        </div>
-      </div>
-    </template>
-    <template v-else>
-      <router-view />
-    </template>
+    </div>
+    <p style="text-align:center;margin-bottom:15px;color:#666;">v1.14</p>
+    <router-view />
   </div>
 </template>
 
 <script>
   import routes from '../router/routes.js'
   export default {
-    computed: {
-      isHome () {
-        return this.$route.path === '/home'
-      }
-    },
     created () {
       this.routes = routes
     }
@@ -53,8 +47,9 @@
   @import '~src/styles/mixins/index.scss';
   .art-home {
     height: 100%;
+    overflow: auto;
     &-logo {
-      padding: 50px 0 30px;
+      padding: 40px 0 25px;
       text-align: center;
       &__title {
         font-size: 32px;
@@ -62,28 +57,28 @@
         color: $color-neutral-title;
       }
       &__desc {
+        margin-top: 8px;
         color: $color-neutral-sub;
       }
     }
     &-route {
       padding: 0 12px 18px;
       &__list {
-        padding-left: 15px;
+        padding: 0 15px;
         color: $color-neutral-title;
         background-color: $color-neutral-light;
         border-radius: $border-radius;
       }
       &__item {
-        &-title {
+        &-wrap {
           display: flex;
           justify-content: space-between;
           align-items: center;
           height: 44px;
-          padding-right: 10px;
         }
         &:not(:last-child) {
-          .art-home-route__item-title {
-            @include border-1px;
+          .art-home-route__item-wrap {
+            @include border-bottom-1px;
           }
         }
       }

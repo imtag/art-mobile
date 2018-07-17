@@ -5,9 +5,8 @@
         {{ $route.meta.title }}
       </h1>
       <art-icon 
-        name="arrow-left" 
+        name="chevron-left" 
         color="#2d8cf0"
-        :size="22"
         @click.native="goBack">
       </art-icon>
     </div>
@@ -32,14 +31,19 @@
   @import '~src/styles/themes/default.scss';
   @import '~src/styles/mixins/index.scss';
   .art-page {
-    height: 100%;
-    position: relative;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background-color: $color-neutral-gray;
     &-header {
       position: relative;
       height: 44px;
       line-height: 44px;
       background-color: $color-neutral-light;
-      @include border-1px;
+      @include border-bottom-1px;
       &__title {
         text-align: center;
         font-size: $font-size-large;
@@ -50,6 +54,7 @@
         height: 100%;
         line-height: 44px;
         position: absolute;
+        font-size: $font-size-large-xxx;
         top: 0;
         left: 0;
         padding: 0 12px;
@@ -62,7 +67,7 @@
       bottom: 0;
       left: 0;
       overflow: auto;
-      padding: 0 12px 18px;
+      padding: 0 12px 15px;
     }
   }
 </style>

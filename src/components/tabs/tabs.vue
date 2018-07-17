@@ -28,8 +28,8 @@
       height: 40px;
       box-sizing: border-box;   
       font-size: $font-size-normal;
-      color: $color-neutral-sub;
-      @include border-1px;
+      color: $color-neutral-content;
+      @include border-bottom-1px;
       &__item {
         position: relative;
         z-index: 1;
@@ -37,7 +37,7 @@
         line-height: 40px;
         box-sizing: border-box;
         &--active {
-          color: $color-neutral-title;
+          color: $color-primary;
           border-bottom: 2px solid $color-primary;
         }
       }

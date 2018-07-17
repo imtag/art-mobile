@@ -50,7 +50,7 @@
     &__wrap {
       display: flex;
       align-items: center;
-      padding: 10px 0;
+      padding: 12px 0;
     }
     &__content {
       flex: 1;
@@ -81,7 +81,7 @@
     }
     &:not(:last-child) {
       .art-radio__wrap {
-        @include border-1px;
+        @include border-bottom-1px;
       }
     }
     &--right {

@@ -11,10 +11,6 @@
   export default {
     name: 'ArtButton',
     props: {
-      disabled: {
-        type: Boolean,
-        default: false
-      },
       type: {
         type: String,
         default: 'default',
@@ -22,7 +18,8 @@
           return [
             'default',
             'primary',
-            'danger'
+            'danger',
+            'link'
           ].indexOf(value) > -1
         }
       },
@@ -36,6 +33,18 @@
             'large'
           ].indexOf(value) > -1
         }
+      },
+      inline: {
+        type: Boolean,
+        default: false
+      },
+      plain: {
+        type: Boolean,
+        default: false
+      },
+      disabled: {
+        type: Boolean,
+        default: false
       }
     },
     computed: {
@@ -44,6 +53,8 @@
           'art-button--' + this.type,
           'art-button--' + this.size,
           {
+            'art-button--inline': this.inline,
+            'art-button--plain': this.plain,
             'art-button--disabled': this.disabled
           }
         ]
@@ -66,41 +77,67 @@
   @import '~src/styles/mixins/index.scss';
   @import '~src/styles/themes/default.scss';
   .art-button {
+    display: block;
+    width: 100%;
     text-align: center;
     font-size: $font-size-normal;
     border-radius: $border-radius;
     box-sizing: border-box;
     &--default {
-      border: 1px solid $color-neutral-border;
-      color: $color-neutral-content;
+      border: 1px solid #ddd;
+      color: $color-neutral-title;
       background-color: $color-neutral-light;
+      &.art-button--plain {
+        background-color: $color-neutral-transparent;
+      }
     }
     &--primary {
       border: 1px solid $color-primary;
       color: $color-neutral-light;
       background-color: $color-primary;
+      &.art-button--plain {
+        background-color: $color-neutral-transparent;
+        color: $color-primary;
+      }
     }
     &--danger {
       border: 1px solid $color-sub-error;
       color: $color-neutral-light;
       background-color: $color-sub-error;
+      &.art-button--plain {
+        background-color: $color-neutral-transparent;
+        color: $color-sub-error;
+      }
+    }
+    &--link {
+      color: $color-primary;
+      @include border-top-1px;
     }
     &--small {
-      height: 22px;
+      height: 24px;
       line-height: 22px;
-      padding: 0 8px;
       font-size: $font-size-small;
     }
     &--normal {
       height: 34px;
-      line-height: 34px;
-      padding: 0 15px;
+      line-height: 32px;
     }
     &--large {
-      display: block;
-      width: 100%;
       height: 40px;
-      line-height: 40px;
+      line-height: 38px;
+    }
+    &--inline {
+      display: inline-block;
+      width: auto;
+      &.art-button--small {
+        padding: 0 8px;
+      }
+      &.art-button--normal {
+        padding: 0 12px;
+      }
+      &.art-button--large {
+        padding: 0 20px;
+      }
     }
     &--disabled {
       opacity: .6;

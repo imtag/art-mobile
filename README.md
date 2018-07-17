@@ -1,5 +1,5 @@
 # Art Mobile
-> An elegant mobile UI lib from Vue.js
+An elegant mobile UI lib from Vue.js
 
 ## Features
 - 风格简约优雅
@@ -45,9 +45,9 @@
 - <input type="checkbox" /> Form 表单
 
 ##### 弹出层
-- <input type="checkbox" /> Toast 提示
+- <input type="checkbox" checked /> Toast 提示
+- <input type="checkbox" checked /> Dialog 对话框
 - <input type="checkbox" /> ActionSheet 操作列表
-- <input type="checkbox" /> Dialog 对话框
 - <input type="checkbox" /> Picker 选择器
 
 ##### 滚动
