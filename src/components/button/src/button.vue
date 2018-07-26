@@ -114,26 +114,28 @@
       @include border-top-1px;
     }
     &--small {
-      height: 24px;
-      line-height: 22px;
+      height: 26px;
+      line-height: 24px;
       font-size: $font-size-small;
     }
     &--normal {
-      height: 34px;
-      line-height: 32px;
+      height: 36px;
+      line-height: 34px;
+      font-size: $font-size-normal;
     }
     &--large {
-      height: 40px;
-      line-height: 38px;
+      height: 42px;
+      line-height: 40px;
+      font-size: $font-size-large;
     }
     &--inline {
       display: inline-block;
       width: auto;
       &.art-button--small {
-        padding: 0 8px;
+        padding: 0 10px;
       }
       &.art-button--normal {
-        padding: 0 12px;
+        padding: 0 15px;
       }
       &.art-button--large {
         padding: 0 20px;

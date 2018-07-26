@@ -5,8 +5,7 @@
         {{ $route.meta.title }}
       </h1>
       <art-icon 
-        name="chevron-left" 
-        color="#2d8cf0"
+        name="arrow-left"
         @click.native="goBack">
       </art-icon>
     </div>
@@ -54,10 +53,10 @@
         height: 100%;
         line-height: 44px;
         position: absolute;
-        font-size: $font-size-large-xxx;
         top: 0;
         left: 0;
         padding: 0 12px;
+        color: $color-primary;
       }
     } 
     &-body {
@@ -67,7 +66,6 @@
       bottom: 0;
       left: 0;
       overflow: auto;
-      padding: 0 12px 15px;
     }
   }
 </style>

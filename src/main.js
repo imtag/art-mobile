@@ -8,6 +8,7 @@ import Row from './components/row'
 import Col from './components/col'
 import Loading from './components/loading'
 import Tag from './components/tag'
+import Searchbar from './components/searchbar'
 // nav
 import Tabs from './components/tabs'
 import Tab from './components/tab'
@@ -17,12 +18,17 @@ import TabPanels from './components/tab-panels'
 import Input from './components/input'
 import Radios from './components/radios'
 import Radio from './components/radio'
+import CheckboxGroup from './components/checkbox-group'
+import Checkbox from './components/checkbox'
 // scroll
+import Swiper from './components/swiper'
+import SwiperItem from './components/swiper-item'
 import Scroll from './components/scroll'
 import PullDown from './components/pull-down'
 // feedback
 import Toast from './components/toast'
 import Dialog from './components/dialog'
+import $Dialog from './components/dialog/src/dialog.js'
 
 const components = [
   Button,
@@ -35,11 +41,17 @@ const components = [
   Tab,
   TabPanel,
   TabPanels,
+  Searchbar,
   Input,
   Radios,
   Radio,
+  CheckboxGroup,
+  Checkbox,
+  Swiper,
+  SwiperItem,
   Scroll,
   PullDown,
+  Toast,
   Dialog
 ]
 
@@ -51,8 +63,6 @@ const install = Vue => {
     component.install(Vue)
   })
   install.installed = true
-
-  Vue.prototype.$Toast = Toast
 }
 
 if (typeof window !== 'undefined' && window.Vue) {

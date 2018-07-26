@@ -1,11 +1,10 @@
 {
   "name": "art-mobile",
-  "version": "1.0.15",
+  "version": "1.0.18",
   "description": "An elegant mobile UI lib from Vue.js",
   "main": "lib/art-mobile.js",
   "author": "jeely",
   "files": [
-    "src",
     "lib"
   ],
   "repository": {
@@ -33,7 +32,7 @@
     "build:component": "cross-env webpack --config build/webpack.prod.component.js",
     "build:example": "cross-env rimraf dist/example && webpack --config build/webpack.prod.example.js",
     "build:doc": "vuepress build document",
-    "deploy:example": "cd dist && git add . && git commit -am 'deploy' && git push -f git@github.com:jeely919/art-mobile.git master:gh-pages",
+    "deploy": "cd dist && git add . && git commit -am 'deploy' && git push -f git@github.com:jeely919/art-mobile.git master:gh-pages",
     "test": ""
   },
   "peerDependencies": {

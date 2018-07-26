@@ -1,6 +1,6 @@
 <template>
   <div class="art-column">
-    <p class="art-column__title">{{ title }}</p>
+    <p v-if="title" class="art-column__title">{{ title }}</p>
     <slot />
   </div>
 </template>
@@ -9,10 +9,7 @@
   export default {
     name: 'Column',
     props: {
-      title: {
-        type: String,
-        required: true
-      }
+      title: String
     }
   }
 </script>
@@ -20,6 +17,7 @@
 <style lang="scss">
   @import '~src/styles/themes/default.scss';
   .art-column {
+    padding: 0 12px;
     &__title {
       padding: 22px 0 10px;
       font-size: $font-size-small;

@@ -26,7 +26,7 @@ const webpackConfig = merge(baseConfig, {
   },
 
   plugins: [
-    new ExtractTextPlugin('styles/art-mobile.css')
+    new ExtractTextPlugin('art-mobile.css')
   ]
 })
 

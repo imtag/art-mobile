@@ -10,7 +10,7 @@
         v-if="route.meta && route.meta.isCategory"
         v-for="(route, index) in routes"
         :key="index">
-        <column :title="route.meta.title" />
+        <p class="art-home-route__title">{{ route.meta.title }}</p>
         <ul class="art-home-route__list">
           <router-link 
             v-for="(routeItem, index) in route.children" :key="index"
@@ -22,13 +22,13 @@
                 <span style="vertical-align:middle;margin-right:10px;">{{ routeItem.meta.title }}</span>
                 <art-tag v-if="!routeItem.meta.finish" type="danger" size="small" plain>待完成</art-tag>
               </div>
-              <art-icon name="chevron-right" />
+              <art-icon name="arrow-right" size="small" color="#80848f" />
             </div>
           </router-link>
         </ul>
       </div>
     </div>
-    <p style="text-align:center;margin-bottom:15px;color:#666;">v1.14</p>
+    <p style="text-align:center;margin-bottom:15px;color:#666;">v1.18</p>
     <router-view />
   </div>
 </template>
@@ -63,6 +63,11 @@
     }
     &-route {
       padding: 0 12px 18px;
+      &__title {
+        padding: 22px 2px 10px;
+        font-size: $font-size-small;
+        color: $color-neutral-sub;
+      }
       &__list {
         padding: 0 15px;
         color: $color-neutral-title;

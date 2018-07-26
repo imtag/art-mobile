@@ -3,7 +3,8 @@
     <art-icon 
       v-if="type !== 'info'" 
       class="art-toast__icon"
-      :name="iconName" :size="16">
+      size="middle"
+      :name="iconName">
     </art-icon>
     <span class="art-toast__text">{{ message }}</span>
   </div>
@@ -15,7 +16,7 @@
     data () {
       return {
         message: '',
-        duration: 3000,
+        duration: 1500,
         type: 'info'
       }
     },
@@ -28,19 +29,21 @@
       iconName () {
         let name = ''
         if (this.type === 'success') {
-          name = 'check-circle'
+          name = 'round_check'
         } else if (this.type === 'fail') {
-          name = 'x-circle'
+          name = 'round_close'
         } else if (this.type === 'loading') {
-          name = 'loader'
+          name = 'loading'
         }
         return name
       }
     },
     mounted () {
       setTimeout(() => {
-        this.$destroy(true)
-        this.$el.parentNode.removeChild(this.$el)
+        if (this.$el.parentNode) {
+          this.$destroy(true)
+          this.$el.parentNode.removeChild(this.$el)
+        }
       }, this.duration)
     }
   }
@@ -55,26 +58,14 @@
     border-radius: $border-radius;
     text-align: center;
     color: $color-neutral-light;
-    background-color: rgba(0, 0, 0, .8);
+    background-color: rgba(0, 0, 0, .7);
     @include center;
     &__icon {
-      margin-right: 3px; 
+      margin-right: 3px;
+      color: $color-neutral-light;
     }
     &__text {
       vertical-align: middle;
-    }
-    &--loading {
-      .art-toast__icon {
-        animation: rotate 1.5s linear infinite;
-      }
-    }
-    @keyframes rotate {
-      from {
-        transform: rotate(0deg)
-      } 
-      to {
-        transform: rotate(360deg)
-      }
     }
   }
 </style>

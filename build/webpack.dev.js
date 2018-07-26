@@ -1,6 +1,6 @@
 const webpack = require('webpack')
 const merge = require('webpack-merge')
-const { resolve, styleLoader } = require('./utils.js')
+const { resolve, styleLoader, getIPAdress } = require('./utils.js')
 const baseConfig = require('./webpack.base.js')
 const HtmlPlugin = require('html-webpack-plugin')
 
@@ -25,7 +25,9 @@ const webpackConfig = merge(baseConfig, {
 
   devServer: {
     contentBase: resolve('dev'),
+    host: getIPAdress(),
     port: 6001,
+    open: true,
     hot: true
   }
 })

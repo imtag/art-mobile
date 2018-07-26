@@ -4,18 +4,28 @@ import ToastComponent from './toast.vue'
 const ToastConstructor = Vue.extend(ToastComponent)
 const ToastType = ['info', 'success', 'fail', 'loading']
 
+let instance = null
+
+const beforeDestroy = () => {
+  instance = null
+}
+
 const Toast = (options) => {
+  if (instance && instance.$el && instance.$el.parentNode) {
+    instance.$el.parentNode.removeChild(instance.$el)
+  }
+
   if (typeof options === 'string') {
     options = {
       message: options
     }
   }
 
-  const instance = new ToastConstructor({
-    data: options
-  })
-  const vm = instance.$mount()
-  document.body.appendChild(vm.$el)
+  instance = new ToastConstructor({
+    data: options,
+    beforeDestroy
+  }).$mount()
+  document.body.appendChild(instance.$el)
 }
 
 ToastType.forEach(type => {

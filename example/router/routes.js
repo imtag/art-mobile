@@ -2,20 +2,24 @@ import Home from 'example/views/home.vue'
 // basic
 import Button from 'src/components/button/demo'
 import Color from 'example/views/color.vue'
-import Icon from 'example/views/icon.vue'
+import Icon from 'src/components/icon/demo'
 import Loading from 'example/views/loading.vue'
 import Tag from 'src/components/tag/demo'
 // nav
 import Tabs from 'example/views/tabs.vue'
 import Layout from 'example/views/layout.vue'
 // form
-import Input from 'example/views/input.vue'
+import Input from 'src/components/input/demo'
 import Radio from 'example/views/radio.vue'
+import Checkbox from 'src/components/checkbox-group/demo'
 // scroll
+import Swiper from 'src/components/swiper/demo'
 import Scroll from 'example/views/scroll.vue'
 // feedback
 import Toast from 'src/components/toast/demo'
 import Dialog from 'src/components/dialog/demo'
+// demo
+import Demo from 'example/views/demo.vue'
 
 export default [
   {
@@ -78,17 +82,17 @@ export default [
       {
         path: '/nav/tabs',
         component: Tabs,
+        meta: { title: 'Search 搜索框', finish: false }
+      },
+      {
+        path: '/nav/tabs',
+        component: Tabs,
         meta: { title: 'Tabbar 标签栏', finish: false }
       },
       {
         path: '/nav/tabs',
         component: Tabs,
-        meta: { title: 'Header 头部', finish: false }
-      },
-      {
-        path: '/nav/tabs',
-        component: Tabs,
-        meta: { title: 'Search 搜索框', finish: false }
+        meta: { title: 'Navbar 导航栏', finish: false }
       }
     ]
   },
@@ -111,9 +115,9 @@ export default [
         meta: { title: 'Radio 单选框', finish: true }
       },
       {
-        path: '/form/radio',
-        component: Radio,
-        meta: { title: 'Checkbox 复选框', finish: false }
+        path: '/form/checkbox',
+        component: Checkbox,
+        meta: { title: 'Checkbox 复选框', finish: true }
       },
       {
         path: '/form/radio',
@@ -166,19 +170,34 @@ export default [
     component: Home,
     children: [
       {
-        path: '/scroll/scroll',
-        component: Scroll,
-        meta: { title: 'Scroll 滚动', finish: true }
+        path: '/scroll/swiper',
+        component: Swiper,
+        meta: { title: 'Swiper 轮播图', finish: true }
       },
       {
         path: '/scroll/scroll',
         component: Scroll,
-        meta: { title: 'Swiper 轮播', finish: false }
+        meta: { title: 'Scroll 滚动', finish: false }
       },
       {
         path: '/form/radio',
         component: Radio,
         meta: { title: 'Sticky 黏贴', finish: false }
+      }
+    ]
+  },
+  {
+    path: '/demo',
+    meta: {
+      title: '滚动',
+      isCategory: true
+    },
+    component: Home,
+    children: [
+      {
+        path: '/demo/demo01',
+        component: Demo,
+        meta: { title: 'Demo 车辆管理', finish: false }
       }
     ]
   }

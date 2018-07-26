@@ -1,16 +1,18 @@
 <template>
-  <div class="art-dialog" v-if="value">
+  <div class="art-dialog" v-if="visible">
     <div class="art-dialog__wrap" :class="dialogClass">
       <art-icon 
         v-if="showClose" 
         class="art-dialog__close" 
-        name="x"
-        @click.native="$emit('input', false)">
+        name="close"
+        @click.native="cancelClick">
       </art-icon>
       <h2 class="art-dialog__header">{{ title }}</h2>
+
       <div class="art-dialog__body">
-        <slot />
+        <slot>{{ content }}</slot>
       </div>
+
       <slot name="footer">
         <div class="art-dialog__footer">
           <art-button
@@ -45,7 +47,7 @@
     props: {
       value: {
         type: Boolean,
-        required: true
+        default: false
       },
       type: {
         type: String,
@@ -57,13 +59,11 @@
           ].indexOf(value) > -1
         }
       },
+      title: String,
+      content: String,
       showClose: {
         type: Boolean,
         default: true
-      },
-      title: {
-        type: String,
-        required: true
       },
       confirmText: {
         type: String,
@@ -74,6 +74,11 @@
         default: '取消'
       }
     },
+    data () {
+      return {
+        visible: this.value
+      }
+    },
     computed: {
       dialogClass () {
         return [
@@ -81,12 +86,33 @@
         ]
       }
     },
+    watch: {
+      value (newVal) {
+        if (newVal) {
+          document.body.appendChild(this.$el)
+        }
+        this.visible = newVal
+      }
+    },
     methods: {
+      close () {
+        this.visible = false
+
+        if (this.action && this.callback) {
+          this.callback(this.action)
+        }
+      },
       cancelClick () {
+        this.action = 'cancel'
+        this.close()
+
         this.$emit('input', false)
         this.$emit('on-cancel')
       },
       confirmClick () {
+        this.action = 'confirm'
+        this.close()
+
         this.$emit('on-confirm')
       }
     }
@@ -98,6 +124,7 @@
   @import '~src/styles/mixins/index.scss';
   .art-dialog {
     @include mask;
+    z-index: 111;
     &__wrap {
       position: relative;
       width: 270px;
@@ -108,25 +135,25 @@
     &__close {
       position: absolute;
       top: 8px;
-      right: 10px;
-      font-size: $font-size-large-x;
+      right: 8px;
       color: $color-neutral-sub;
     }
     &__header {
+      padding-top: 25px;
       font-size: $font-size-large;
       text-align: center;
-      padding-top: 25px;
       color: $color-neutral-title;
     }
     &__body {
-      padding: 12px 18px 18px;
+      padding: 8px 18px 18px;
       line-height: 1.5;
       color: $color-neutral-sub;
+      text-align: center;
     }
     &__footer {
       display: flex;
     }
-    .art-dialog__footer-cancel {
+    &__footer-cancel {
       border: none;
       @include border-top-1px;
       @include border-right-1px;

@@ -35,6 +35,7 @@
         z-index: 1;
         height: 40px;
         line-height: 40px;
+        padding: 0 5px;
         box-sizing: border-box;
         &--active {
           color: $color-primary;

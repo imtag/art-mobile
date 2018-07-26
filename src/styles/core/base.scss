@@ -1,9 +1,15 @@
-button {
-	background-color: rgba(0, 0, 0, 0);
+input, button {
+	font-size: 14px;
 	outline: none;
 	border: none;
 	padding: 0;
+	margin: 0;
+	background-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
+}
+
+img {
+	vertical-align: middle;
 }
 
 a {

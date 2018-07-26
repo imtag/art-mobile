@@ -1,4 +1,4 @@
-import Input from './input.vue'
+import Input from './src/input.vue'
 
 Input.install = Vue => {
   Vue.component(Input.name, Input)

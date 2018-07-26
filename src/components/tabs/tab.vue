@@ -2,7 +2,7 @@
   <li 
     class="art-tabs-nav__item"
     :class="tabClass"
-    @click="tabClick">
+    @click.stop="tabClick">
     <slot />
   </li>
 </template>

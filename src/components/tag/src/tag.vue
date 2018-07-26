@@ -103,11 +103,11 @@
     }
     &--normal {
       font-size: $font-size-small;
-      padding: 4px 8px;
+      padding: 4px 5px;
     }
     &--large {
       font-size: $font-size-normal;
-      padding: 5px 10px;
+      padding: 5px 7px;
     }
   }
 </style>
