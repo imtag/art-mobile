@@ -6,7 +6,6 @@
     top: 0;
     right: 0;
     left: 0;
-    width: 100%;
     border-top: 1PX solid $color;
     @media screen and (-webkit-min-device-pixel-ratio: 2) {
       transform: scaleY(.5);
@@ -25,7 +24,6 @@
     top: 0;
     right: 0;
     bottom: 0;
-    width: 100%;
     border-right: 1PX solid $color;
     @media screen and (-webkit-min-device-pixel-ratio: 2) {
       transform: scaleX(.5);
@@ -44,7 +42,6 @@
     right: 0;
     bottom: 0;
     left: 0;
-    width: 100%;
     border-bottom: 1PX solid $color;
     @media screen and (-webkit-min-device-pixel-ratio: 2) {
       transform: scaleY(.5);
@@ -63,7 +60,6 @@
     top: 0;
     bottom: 0;
     left: 0;
-    width: 100%;
     border-left: 1PX solid $color;
     @media screen and (-webkit-min-device-pixel-ratio: 2) {
       transform: scaleX(.5);

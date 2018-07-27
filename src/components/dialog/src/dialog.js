@@ -56,11 +56,6 @@ const showDialog = () => {
     }
   }
 
-  // 非callback回调
-  // if (typeof options.callback !== 'function') {
-  //   instance.callback = defultCallback
-  // }
-
   // 挂载dom，显示组件
   document.body.appendChild(instance.$el)
   Vue.nextTick(() => {
