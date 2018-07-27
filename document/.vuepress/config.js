@@ -6,7 +6,7 @@ module.exports = {
   port: '6002',
   themeConfig: {
     nav: [
-      { text: '文档', link: '/guide/introduce' },
+      { text: '文档', link: '/guide/quick-start' },
       { text: '示例', link: 'https://jeely919.github.io/art-mobile/example' },
       { text: 'GitHub', link: 'https://github.com/jeely919/art-mobile' }
     ],
@@ -16,16 +16,20 @@ module.exports = {
           title: '概览',
           collapsable: false,
           children: [
-            'introduce',
             'quick-start'
           ]
         },
         {
-          title: '基础组件',
+          title: '组件',
           collapsable: false,
           children: [
             'button',
-            'tabs'
+            'icon',
+            'loading',
+            'tag',
+            'tabs',
+            'toast',
+            'dialog'
           ]
         }
       ]

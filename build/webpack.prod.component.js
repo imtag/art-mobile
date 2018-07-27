@@ -6,10 +6,10 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 const components = {}
 const componentsPath = resolve('src/components')
-const files = fs.readdirSync(componentsPath)
+const dirs = fs.readdirSync(componentsPath)
 
-if (files && files.length) {
-  files.forEach(name => {
+if (dirs && dirs.length) {
+  dirs.forEach(name => {
     components[name] = resolve(componentsPath + '/' + name)
   })
 }
@@ -23,9 +23,7 @@ const webpackConfig = merge(baseConfig, {
   output: {
     path: resolve('lib'),
     publicPath: '/lib/',
-    filename: '[name]/index.js',
-    library: 'art-mobile',
-    libraryTarget: 'umd'
+    filename: '[name]/index.js'
   },
 
   module: {
@@ -33,7 +31,12 @@ const webpackConfig = merge(baseConfig, {
   },
 
   externals: {
-    Vue: 'Vue'
+    vue: {
+      root: 'Vue',
+      commonjs: 'vue',
+      commonjs2: 'vue',
+      amd: 'vue'
+    }
   },
 
   plugins: [

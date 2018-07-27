@@ -28,7 +28,6 @@ import PullDown from './components/pull-down'
 // feedback
 import Toast from './components/toast'
 import Dialog from './components/dialog'
-import $Dialog from './components/dialog/src/dialog.js'
 
 const components = [
   Button,

@@ -1,6 +1,6 @@
 {
   "name": "art-mobile",
-  "version": "1.0.18",
+  "version": "1.0.30",
   "description": "An elegant mobile UI lib from Vue.js",
   "main": "lib/art-mobile.js",
   "author": "jeely",

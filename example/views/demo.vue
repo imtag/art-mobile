@@ -23,7 +23,7 @@
             :key="type.id" 
             :id="type.id">
             <ul class="car-manage__car-list">
-              <li class="car-manage__car-item" v-for="item in 30" :key="item">
+              <li class="car-manage__car-item" v-for="item in 4" :key="item">
                 {{ type.label }} - {{ item }}
               </li>
             </ul>
@@ -61,7 +61,6 @@
 </script>
 
 <style lang="scss">
-  @import '~src/styles/themes/default.scss';
   .car-manage {
     &__tabs, &__search {
       background-color: #fff;

@@ -22,9 +22,14 @@ const webpackConfig = merge(baseConfig, {
   },
 
   externals: {
-    vue: 'Vue'
+    vue: {
+      root: 'Vue',
+      commonjs: 'vue',
+      commonjs2: 'vue',
+      amd: 'vue'
+    }
   },
-
+  
   plugins: [
     new ExtractTextPlugin('art-mobile.css')
   ]

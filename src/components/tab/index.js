@@ -1,4 +1,4 @@
-import Tab from '../tabs/tab.vue'
+import Tab from '../tabs/src/tab.vue'
 
 Tab.install = Vue => {
   Vue.component(Tab.name, Tab)

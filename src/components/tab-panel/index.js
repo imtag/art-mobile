@@ -1,4 +1,4 @@
-import TabPanel from '../tab-panels/tab-panel.vue'
+import TabPanel from '../tab-panels/src/tab-panel.vue'
 
 TabPanel.install = Vue => {
   Vue.component(TabPanel.name, TabPanel)

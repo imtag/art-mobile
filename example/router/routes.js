@@ -3,14 +3,14 @@ import Home from 'example/views/home.vue'
 import Button from 'src/components/button/demo'
 import Color from 'example/views/color.vue'
 import Icon from 'src/components/icon/demo'
-import Loading from 'example/views/loading.vue'
+import Loading from 'src/components/loading/demo'
 import Tag from 'src/components/tag/demo'
 // nav
-import Tabs from 'example/views/tabs.vue'
+import Tabs from 'src/components/tabs/demo'
 import Layout from 'example/views/layout.vue'
 // form
 import Input from 'src/components/input/demo'
-import Radio from 'example/views/radio.vue'
+import Radio from 'src/components/radios/demo'
 import Checkbox from 'src/components/checkbox-group/demo'
 // scroll
 import Swiper from 'src/components/swiper/demo'
@@ -63,6 +63,11 @@ export default [
         path: '/basic/tag',
         component: Tag,
         meta: { title: 'Tag 标签', finish: true }
+      },
+      {
+        path: '/nav/tabs',
+        component: Tabs,
+        meta: { title: 'Search 搜索框', finish: false }
       }
     ]
   },
@@ -78,11 +83,6 @@ export default [
         path: '/nav/tabs',
         component: Tabs,
         meta: { title: 'Tabs 标签页', finish: true }
-      },
-      {
-        path: '/nav/tabs',
-        component: Tabs,
-        meta: { title: 'Search 搜索框', finish: false }
       },
       {
         path: '/nav/tabs',
@@ -189,7 +189,7 @@ export default [
   {
     path: '/demo',
     meta: {
-      title: '滚动',
+      title: '示例',
       isCategory: true
     },
     component: Home,

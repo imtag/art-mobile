@@ -1,4 +1,4 @@
-import Loading from './loading.vue'
+import Loading from './src/loading.vue'
 
 Loading.install = Vue => {
   Vue.component(Loading.name, Loading)

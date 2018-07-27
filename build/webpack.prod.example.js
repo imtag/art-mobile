@@ -38,10 +38,10 @@ const webpackConfig = merge(baseConfig, {
     splitChunks: {
       cacheGroups: {
         common: {
-          name: "common",
-          chunks: "all",
+          name: 'common',
+          chunks: 'all',
           test: /src/,
-          minChunks: 1,
+          minChunks: 2,
           minSize: 0
         },
         vendor: {
@@ -50,6 +50,9 @@ const webpackConfig = merge(baseConfig, {
           test: resolve('node_modules')
         }
       }
+    },
+    runtimeChunk: {
+      name: 'manifest'
     }
   }
 })

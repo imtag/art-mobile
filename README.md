@@ -4,7 +4,7 @@ An elegant mobile UI lib from Vue.js
 ## Features
 - 风格简约优雅
 - 支持多平台
-- 功能完善
+- 高质量
 
 ## Links
 - [Document](https://jeely919.github.io/art-mobile/doc)
@@ -17,11 +17,10 @@ An elegant mobile UI lib from Vue.js
 - <input type="checkbox" checked /> 支持rem
 - <input type="checkbox" checked /> npm上架
 - <input type="checkbox" checked /> 文档
-- <input type="checkbox" checked /> 项目案例
+- <input type="checkbox" /> 项目案例
 - <input type="checkbox" /> 单元测试
 - <input type="checkbox" /> 主题定制
 - <input type="checkbox" /> 支持ssr
-- <input type="checkbox" /> 支持mpvue
 
 ## Components
 ##### 基础
@@ -51,7 +50,7 @@ An elegant mobile UI lib from Vue.js
 - <input type="checkbox" /> Picker 选择器
 
 ##### 滚动
-- <input type="checkbox" /> Swiper 轮播
+- <input type="checkbox" checked /> Swiper 轮播
 - <input type="checkbox" /> Scroll 滚动
 - <input type="checkbox" /> Sticky 黏贴
 

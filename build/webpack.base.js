@@ -15,18 +15,18 @@ const webpackConfig = {
         }
       },
       {
+        test: /\.(js|vue)$/,
+        exclude: [resolve('node_modules')],
+        enforce: 'pre',
+        loader: 'eslint-loader'
+      },
+      {
         test: /\.js$/,
         exclude: [resolve('node_modules')],
         loader: 'babel-loader',
         options: {
           cacheDirectory: true
         }
-      },
-      {
-        test: /\.(js|vue)$/,
-        exclude: [resolve('node_modules')],
-        enforce: 'pre',
-        use: 'eslint-loader'
       },
       {
         test: /\.(png|jpe?g|gif)(\?.*)?$/,

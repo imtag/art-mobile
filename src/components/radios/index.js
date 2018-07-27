@@ -1,4 +1,4 @@
-import Radios from './radios.vue'
+import Radios from './src/radios.vue'
 
 Radios.install = Vue => {
   Vue.component(Radios.name, Radios)

@@ -6,6 +6,7 @@
       </h1>
       <art-icon 
         name="arrow-left"
+        :bold="true"
         @click.native="goBack">
       </art-icon>
     </div>
@@ -66,6 +67,7 @@
       bottom: 0;
       left: 0;
       overflow: auto;
+      padding-bottom: 20px;
     }
   }
 </style>

@@ -18,7 +18,7 @@
 </template>
 
 <script>
-  import Emitter from '../../mixins/emitter.js'
+  import Emitter from 'src/mixins/emitter.js'
   export default {
     name: 'ArtRadio',
     mixins: [Emitter],
