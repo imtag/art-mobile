@@ -44,6 +44,7 @@ const showDialog = () => {
   instance = new DialogConstructer({
     beforeDestroy
   }).$mount()
+
   instance.callback = defultCallback
   instance.action = ''
 
@@ -56,9 +57,9 @@ const showDialog = () => {
   }
 
   // 非callback回调
-  if (typeof options.callback !== 'function') {
-    instance.callback = defultCallback
-  }
+  // if (typeof options.callback !== 'function') {
+  //   instance.callback = defultCallback
+  // }
 
   // 挂载dom，显示组件
   document.body.appendChild(instance.$el)
@@ -73,6 +74,8 @@ const showDialog = () => {
  */
 const Dialog = (options) => {
   let callback = null
+
+  // 回调函数
   if (options.callback) {
     callback = options.callback
   }
@@ -82,6 +85,7 @@ const Dialog = (options) => {
     callback
   }
 
+  // 基于promise
   if (typeof Promise !== 'undefined') {
     return new Promise((resolve, reject) => {
       dialogConfig.resolve = resolve

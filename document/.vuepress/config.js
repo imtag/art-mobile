@@ -24,12 +24,12 @@ module.exports = {
           collapsable: false,
           children: [
             'button',
-            'icon',
+            'dialog',
             'loading',
-            'tag',
-            'tabs',
             'toast',
-            'dialog'
+            'icon',
+            'tag',
+            'tabs'
           ]
         }
       ]

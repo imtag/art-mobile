@@ -23,7 +23,8 @@ const webpackConfig = merge(baseConfig, {
   output: {
     path: resolve('lib'),
     publicPath: '/lib/',
-    filename: '[name]/index.js'
+    filename: '[name]/index.js',
+    libraryTarget: 'umd'
   },
 
   module: {

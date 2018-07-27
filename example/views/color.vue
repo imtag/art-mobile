@@ -32,6 +32,8 @@
         <space />
         <color-item class="item-color" title="Neutral Light" color="#ffffff" />
       </column>
+
+      <div class="hello">不错</div>
     </div>
   </page>
 </template>
@@ -47,10 +49,17 @@
 
 <style lang="scss">
   @import '~src/styles/themes/default.scss';
+  @import '~src/styles/mixins/index.scss';
   .art-example-color {
     .item-color {
       border: 1px solid $color-neutral-sub;
       color: $color-neutral-content;
+    }
+    .hello {
+      margin: 20px;
+      @include border-top-1px;
+      @include border-right-1px;
+      @include border-bottom-1px;
     }
   }
 </style>

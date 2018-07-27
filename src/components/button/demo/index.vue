@@ -4,7 +4,7 @@
       <column title="按钮类型">
         <art-button>Default</art-button>
         <space />
-        <art-button type="primary" >Primary</art-button>
+        <art-button type="primary">Primary</art-button>
         <space />
         <art-button type="danger">Danger</art-button>
         <space />
