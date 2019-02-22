@@ -7,9 +7,9 @@ An elegant mobile UI lib from Vue.js
 - 高质量
 
 ## Links
-- [Document](https://jeely919.github.io/art-mobile/doc)
-- [Example](https://jeely919.github.io/art-mobile/example)
-- [Demo](https://jeely919.github.io/art-mobile/demo.html)
+- [Document](https://jeely95.github.io/art-mobile/doc)
+- [Example](https://jeely95.github.io/art-mobile/example)
+- [Demo](https://jeely95.github.io/art-mobile/demo.html)
 
 ## Todos
 - <input type="checkbox" checked /> webpack4构建
