@@ -32,8 +32,6 @@
         <space />
         <color-item class="item-color" title="Neutral Light" color="#ffffff" />
       </column>
-
-      <div class="hello">不错</div>
     </div>
   </page>
 </template>

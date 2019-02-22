@@ -20,11 +20,17 @@ import Toast from 'src/components/toast/demo'
 import Dialog from 'src/components/dialog/demo'
 // demo
 import Demo from 'example/views/demo.vue'
+// palette
+import Palette from '../views/palette.vue'
 
 export default [
   {
     path: '/',
     component: Home
+  },
+  {
+    path: '/palette',
+    component: Palette
   },
   {
     path: '/basic',

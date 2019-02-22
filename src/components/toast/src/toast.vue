@@ -45,6 +45,11 @@
           this.$el.parentNode.removeChild(this.$el)
         }
       }, this.duration)
+    },
+    destroyed () {
+      if (this.$el && this.$el.parentNode) {
+        this.$el.parentNode.removeChild(this.$el)
+      }
     }
   }
 </script>

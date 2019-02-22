@@ -1,0 +1,56 @@
+// primary color
+$color-primary: var(--color-primary) !default;
+$color-primary-light: var(--color-primary-light) !default;
+$color-primary-dark: var(--color-primary-dark) !default;
+
+// sub color
+$color-sub-info: var(--color-sub-info) !default;
+$color-sub-success: var(--color-sub-success) !default;
+$color-sub-warning: var(--color-sub-warning) !default;
+$color-sub-error: var(--color-sub-error) !default;
+
+// neutral color 
+$color-neutral-title: var(--color-neutral-title) !default;
+$color-neutral-content: var(--color-neutral-content) !default;
+$color-neutral-sub: var(--color-neutral-sub) !default;
+$color-neutral-border: var(--color-neutral-border) !default;
+$color-neutral-gray: var(--color-neutral-gray) !default;
+$color-neutral-light: var(--color-neutral-light) !default;
+$color-neutral-transparent: var(--color-neutral-transparent) !default;
+
+// box shadow
+$box-shadow: var(--box-shadow) !default;
+
+// border radius
+$border-radius: var(--border-radius) !default;
+
+// font size
+$font-size-large-xxxx: var(--font-size-large-xxxx) !default;
+$font-size-large-xxx: var(--font-size-large-xxx) !default;
+$font-size-large-xx: var(--font-size-large-xx) !default;
+$font-size-large-x: var(--font-size-large-x) !default;
+$font-size-large: var(--font-size-large) !default;
+$font-size-normal: var(--font-size-normal) !default;
+$font-size-small: var(--font-size-small) !default;
+$font-size-small-x: var(--font-size-small-x) !default;
+
+// icon size
+$icon-size-large-xx: var(--icon-size-large-xx) !default;      
+$icon-size-large-x: var(--icon-size-large-x) !default;      
+$icon-size-large: var(--icon-size-large) !default;
+$icon-size-normal: var(--icon-size-normal) !default;
+$icon-size-small: var(--icon-size-small) !default;
+
+// button
+$button-normal-height: var(--button-normal-height) !default;
+$button-small-height: var(--button-small-height) !default;
+$button-large-height: var(--button-large-height) !default;
+
+$button-primary-fill: var(--button-primary-fill) !default;
+$button-danger-fill: var(--button-danger-fill) !default;
+
+$button-radius: var(--button-radius) !default;
+
+$button-normal-font-size: var(--button-normal-font-size) !default;
+$button-small-font-size: var(--button-small-font-size) !default;
+$button-large-font-size: var(--button-large-font-size) !default;

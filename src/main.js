@@ -1,6 +1,6 @@
 import { version } from '../package.json'
 /* eslint-disable no-unused-vars */
-import Style from './components/style'
+import './components/style'
 // basic
 import Button from './components/button'
 import Icon from './components/icon'

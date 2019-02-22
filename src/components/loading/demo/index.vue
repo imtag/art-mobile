@@ -13,7 +13,7 @@
      </column>
 
      <column title="居中">
-      <art-loading align="center" color="#bfa">拼命加载中...</art-loading>
+      <art-loading align="center" color="#2d8cf0">拼命加载中...</art-loading>
      </column>
   </page>
 </template>

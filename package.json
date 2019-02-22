@@ -1,6 +1,6 @@
 {
   "name": "art-mobile",
-  "version": "1.0.31",
+  "version": "1.0.32",
   "description": "An elegant mobile UI lib from Vue.js",
   "main": "lib/art-mobile.js",
   "author": "jeely",
@@ -40,7 +40,6 @@
   },
   "devDependencies": {
     "autoprefixer": "^8.6.2",
-    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.6",
     "babel-loader": "^7.1.4",
@@ -68,6 +67,7 @@
     "sass-loader": "^7.0.3",
     "style-loader": "^0.21.0",
     "url-loader": "^1.0.1",
+    "element-ui": "^2.5.4",
     "vue": "^2.5.16",
     "vue-lazyload": "^1.2.5",
     "vue-loader": "^15.2.4",

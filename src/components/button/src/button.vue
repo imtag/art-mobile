@@ -80,9 +80,8 @@
     display: block;
     width: 100%;
     text-align: center;
-    font-size: $font-size-normal;
-    border-radius: $border-radius;
-    box-sizing: border-box;
+    border-radius: $button-radius;
+    box-sizing: content-box;
     &--default {
       border: 1px solid #ddd;
       color: $color-neutral-title;
@@ -92,21 +91,21 @@
       }
     }
     &--primary {
-      border: 1px solid $color-primary;
+      border: 1px solid $button-primary-fill;
       color: $color-neutral-light;
-      background-color: $color-primary;
+      background-color: $button-primary-fill;
       &.art-button--plain {
         background-color: $color-neutral-transparent;
-        color: $color-primary;
+        color: $button-primary-fill;
       }
     }
     &--danger {
-      border: 1px solid $color-sub-error;
+      border: 1px solid $button-danger-fill;
       color: $color-neutral-light;
-      background-color: $color-sub-error;
+      background-color: $button-danger-fill;
       &.art-button--plain {
         background-color: $color-neutral-transparent;
-        color: $color-sub-error;
+        color: $button-danger-fill;
       }
     }
     &--link {
@@ -114,19 +113,19 @@
       @include border-top-1px;
     }
     &--small {
-      height: 26px;
-      line-height: 24px;
-      font-size: $font-size-small;
+      height: $button-small-height;
+      line-height: $button-small-height;
+      font-size: $button-small-font-size;
     }
     &--normal {
-      height: 36px;
-      line-height: 34px;
-      font-size: $font-size-normal;
+      height: $button-normal-height;
+      line-height: $button-normal-height;
+      font-size: $button-normal-font-size;
     }
     &--large {
-      height: 42px;
-      line-height: 40px;
-      font-size: $font-size-large;
+      height: $button-large-height;
+      line-height: $button-large-height;
+      font-size: $button-large-font-size;
     }
     &--inline {
       display: inline-block;

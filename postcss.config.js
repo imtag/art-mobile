@@ -5,6 +5,7 @@ module.exports = {
     },
     'postcss-pxtorem': {
       rootValue: 50,
+      unitPrecision: 5,
       propList: ['*']
     }
   }
