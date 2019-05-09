@@ -1,0 +1,1 @@
+.art-toast{z-index:111;padding:12px 20px;border-radius:var(--border-radius);text-align:center;background-color:rgba(0,0,0,.7);position:absolute;left:50%;top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.art-toast,.art-toast__icon{color:var(--color-neutral-light)}.art-toast__icon{margin-right:3px}.art-toast__text{vertical-align:middle}
