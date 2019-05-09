@@ -2,7 +2,7 @@
   <div class="wrapper">
     <div class="preview">
       <!-- <button-demo></button-demo> -->
-      <iframe width="375" height="667" src="#/basic/button"></iframe>
+      <iframe id="iframe" width="375" height="667" src="#/basic/button"></iframe>
     </div>
     <div class="editor">
       <div 

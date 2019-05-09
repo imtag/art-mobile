@@ -7,8 +7,8 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: '文档', link: '/guide/quick-start' },
-      { text: '示例', link: 'https://jeely919.github.io/art-mobile/example' },
-      { text: 'GitHub', link: 'https://github.com/jeely919/art-mobile' }
+      { text: '示例', link: 'https://sankincn.github.io/art-mobile/example' },
+      { text: 'GitHub', link: 'https://github.com/sankincn/art-mobile' }
     ],
     sidebar: {
       '/guide/': [

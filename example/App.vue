@@ -27,9 +27,9 @@
         }
       }
       update(false)
-      setInterval(() => {
-        update(true)
-      }, 300)
+      // setInterval(() => {
+      //   update(true)
+      // }, 300)
     }
   }
 </script>
