@@ -9,11 +9,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/jeely919/art-mobile"
+    "url": "https://github.com/imtag/art-mobile"
   },
-  "homepage": "https://jeely919.github.io/art-mobile/doc",
+  "homepage": "https://imtag.github.io/art-mobile/doc",
   "bugs": {
-    "url": "https://github.com/jeely919/art-mobile/issues"
+    "url": "https://github.com/imtag/art-mobile/issues"
   },
   "keywords": [
     "art-mobile",
